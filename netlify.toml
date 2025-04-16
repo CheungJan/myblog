@@ -1,12 +1,9 @@
 [build]
-command = "pip install -r requirements.txt && python setup.py build"
-publish = "build"
-functions = "functions"
+command = "pip install -r requirements.txt"
+publish = "."
 
 [build.environment]
-PYTHON_VERSION = "3.9"
+PYTHON_VERSION = "3.8"
 
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+[functions]
+directory = "netlify/functions"
