@@ -220,7 +220,8 @@ def edit_link(link_id):
 @login_required
 def delete_link(link_id):
     link = Link.query.get_or_404(link_id)
-    link.delete()
+    db.session.delete(link)
+    db.session.commit()
     flash('Link deleted.', 'success')
     return redirect(url_for('.manage_link'))
 
