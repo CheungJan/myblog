@@ -129,7 +129,7 @@ def register_errors(app):
 def register_commands(app):
     @app.cli.command('initdb')
     @click.option('--drop', is_flag=True, help='Create after drop.')
-    def initdb():
+    def initdb(drop):
         """Initialize dataase."""
         if drop:
             click.confirm('This operation will delete the database, do you want to continue?', abort=True)
