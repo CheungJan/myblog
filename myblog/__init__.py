@@ -83,7 +83,7 @@ def register_extensions(app):
     ckeditor.init_app(app)
     mail.init_app(app)
     moment.init_app(app)
-    migrate.init_app(app)
+    migrate.init_app(app, db)
     # toolbar.init_app(app)  # 暂时禁用debug toolbar以解决跨盘符问题
 
 def register_blueprints(app): 

@@ -12,7 +12,7 @@ from datetime import datetime
 class Admin(db.Model,UserMixin):
     id = db.Column(db.Integer,primary_key=True) #主键字段
     username = db.Column(db.String(20)) #用户姓名
-    password_hash = db.Column(db.String(128)) #密码散列值
+    password_hash = db.Column(db.String(256)) #密码散列值
     blog_title = db.Column(db.String(60)) #博客标题
     blog_sub_title = db.Column(db.String(100)) #博客副标题
     name = db.Column(db.String(30)) #作者姓名

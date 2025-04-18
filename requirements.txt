@@ -18,6 +18,7 @@ Werkzeug==2.2.3
 WTForms==2.2.1
 Jinja2==3.0.3
 bleach==6.1.0
+PyMySQL==1.1.0
 # 部署所需依赖
 gunicorn==21.2.0
 gevent==23.9.1
