@@ -24,7 +24,7 @@ from myblog.settings import config
 # 基础目录 basedir=E:\project\Escort_management_system\flask_demo\myblog
 basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))   
 
-def create_app(config_name):
+def create_app(config_name=None):
     if config_name is None:
         config_name = os.getenv('FLASK_CONFIG', 'development')
     
@@ -213,4 +213,4 @@ def register_request_handlers(app):
         return request
 
 # 在文件末尾添加
-app = create_app('development')
+# app = create_app('development')
